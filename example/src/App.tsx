@@ -1,18 +1,15 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-wannads';
+import { StyleSheet, View, Button } from 'react-native';
+import { showOfferWall } from 'react-native-wannads';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        title="start"
+        onPress={() => showOfferWall('API key', 'API secret', 'User Id')}
+      />
     </View>
   );
 }

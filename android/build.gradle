@@ -3,6 +3,7 @@ buildscript {
         repositories {
             google()
             mavenCentral()
+            // mavenLocal()
             jcenter()
         }
 
@@ -43,7 +44,6 @@ android {
 }
 
 repositories {
-    mavenLocal()
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url("$rootDir/../node_modules/react-native/android")
@@ -51,9 +51,11 @@ repositories {
     google()
     mavenCentral()
     jcenter()
+    mavenLocal()
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "com.wannads:android-sdk:2.5.0"
 }

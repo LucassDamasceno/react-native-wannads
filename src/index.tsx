@@ -17,6 +17,10 @@ const Wannads = NativeModules.Wannads
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Wannads.multiply(a, b);
+export function showOfferWall(
+  apiKey: string,
+  apiSecret: string,
+  userId: string
+): Promise<number> {
+  return Wannads.showOfferWall(apiKey, apiSecret, userId);
 }
